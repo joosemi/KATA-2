@@ -5,9 +5,16 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
-        int[] array = {1,4,7,1,1,8,4,1,4,9};
-        Histogram miHisto = new Histogram(array);
-        HashMap<Integer,Integer> histogram = miHisto.getHistogram();
+        Integer[] vector = {1,4,7,1,1,8,4,1,4,9};
+        String[] vector1 = {"Ana", "Juan", "Pedro", "Ana", "Juan", "Juan"};
+        
+        Histogram <Integer> histogram = CalculaHistogram.calcHisto(vector);
+        for (Object key : histogram.keySet()) {
+            System.out.println(key + " ->" + histogram.get(key));
+            
+        }
+        
+
         System.out.println(histogram);
     }
 }
